@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+}
+.edit-button,
+.delete-button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-button {
+  margin-right: 8px;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  opacity: 0.8;
+}

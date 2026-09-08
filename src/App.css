@@ -1,0 +1,328 @@
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.app h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.app > p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.summary-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.summary-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card h3 {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.summary-card p {
+  font-size: 28px;
+  font-weight: bold;
+}
+.form-container {
+  background: white;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #222;
+  color: white;
+}
+
+.form-container button:hover {
+  opacity: 0.9;
+}
+.transaction-container {
+  background: white;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.transaction-container h2 {
+  margin-bottom: 20px;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.transaction-item h3 {
+  margin-bottom: 5px;
+}
+
+.transaction-item p {
+  color: #777;
+  font-size: 14px;
+}
+
+.transaction-item span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.transaction-item .income {
+  color: green;
+}
+
+.transaction-item .expense {
+  color: red;
+}
+
+.empty-message {
+  color: #777;
+}
+.delete-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #eee;
+}
+
+.delete-button:hover {
+  background: #ddd;
+}
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.filters input,
+.filters select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.chart-container {
+  background: white;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.chart-container h2 {
+  margin-bottom: 20px;
+}
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .app {
+    padding: 25px 15px;
+  }
+
+  .summary-container {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .transaction-item > div:last-child {
+    width: 100%;
+  }
+
+  .transaction-item button {
+    margin-top: 5px;
+  }
+}
+.app h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.app > p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  transition: transform 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+}
+
+.transaction-item {
+  transition: box-shadow 0.2s ease;
+}
+
+.transaction-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+/* Dashboard Header */
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: #777;
+  font-size: 16px;
+}
+
+
+/* Better Summary Cards */
+
+.summary-card {
+  border: 1px solid #eee;
+  transition: all 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Better Filters */
+
+.filters {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.filters input:focus,
+.filters select:focus {
+  outline: none;
+  border-color: #555;
+}
+
+
+/* Better Buttons */
+
+.edit-button {
+  background: #f0f0f0;
+}
+
+.delete-button {
+  background: #ffecec;
+}
+
+.edit-button:hover {
+  background: #ddd;
+}
+
+.delete-button:hover {
+  background: #ffd5d5;
+}
+
+
+/* Transaction improvement */
+
+.transaction-item {
+  background: #fff;
+}
+
+.transaction-item h3 {
+  font-size: 16px;
+}
+
+.transaction-item span {
+  min-width: 100px;
+  text-align: right;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .dashboard-header h1 {
+    font-size: 30px;
+  }
+
+  .summary-card p {
+    font-size: 24px;
+  }
+
+  .transaction-item span {
+    text-align: left;
+  }
+
+}
